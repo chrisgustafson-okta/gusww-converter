@@ -1,6 +1,6 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
     <li [ngbNavItem]="1">
-      <a ngbNavLink routerLink="home"><i class="bi bi-house"></i>One</a>
+      <a ngbNavLink routerLink="home">Home</a>
  
     </li>
     <li [ngbNavItem]="2">
@@ -9,7 +9,14 @@
     </li>
     <li [ngbNavItem]="3">
       <a ngbNavLink>Three</a>
- 
+     
     </li>
+    <li [ngbNavItem]="4">
+        <a ngbNavLink routerLink="user-profile">Profile</a>
+       
+      </li>
+    <li [ngbNavItem]="5">
+        <app-login-button></app-login-button>   
+      </li>
   </ul>
   <ng-content></ng-content>

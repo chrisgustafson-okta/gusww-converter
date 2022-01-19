@@ -1,0 +1,15 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink routerLink="home"><i class="bi bi-house"></i>One</a>
+ 
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Two</a>
+ 
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Three</a>
+ 
+    </li>
+  </ul>
+  <ng-content></ng-content>

@@ -3,19 +3,19 @@
       <a ngbNavLink routerLink="home">Home</a>
  
     </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink>Two</a>
- 
-    </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>Three</a>
-     
-    </li>
-    <li [ngbNavItem]="4">
-        <a ngbNavLink routerLink="user-profile">Profile</a>
-       
+    <li ngbDropdown class="nav-item" [ngbNavItem]="2">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Conversion Tools</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem routerLink="distance-convert">Distance</button>
+          <div class="dropdown-divider"></div>
+        </div>
       </li>
-    <li [ngbNavItem]="5">
+    
+    <li *ngIf="auth.isAuthenticated$ | async;"  [ngbNavItem]="3">
+        <a ngbNavLink routerLink="user-profile">Profile</a>
+        
+      </li>
+    <li [ngbNavItem]="5" style="padding-top:5px;">
         <app-login-button></app-login-button>   
       </li>
   </ul>

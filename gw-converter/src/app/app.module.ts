@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,6 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from '@auth0/auth0-angular';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { DistanceConvertComponent } from './distance-convert/distance-convert.component';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     HomeComponent,
     MainNavComponent,
     LoginButtonComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DistanceConvertComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AuthModule.forRoot({
       domain: 'gusww.us.auth0.com',
       clientId: 'hShD0UJALOnrtnZ54w6I4UN4zrgrBdGg'

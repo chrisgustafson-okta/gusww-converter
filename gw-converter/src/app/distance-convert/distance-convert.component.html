@@ -1,0 +1,11 @@
+<h2>Distance Conversion</h2>
+<div class="form-group">
+
+    <label for="StartingValue">Feet</label>
+ <input type="text" class="form-control" id="StartingValue"
+       required
+       [(ngModel)]="model.startValue" name="Start" (ngModelChange)="model.Convert()" >
+
+</div>
+
+{{model.convertValue}}
